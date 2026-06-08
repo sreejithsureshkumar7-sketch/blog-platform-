@@ -1,0 +1,1 @@
+requireLogin();const u=user();$('userInfo').innerHTML=`<b>Name:</b> ${u.name}<br><b>Email:</b> ${u.email}`;$('myPosts').innerHTML=get('posts').filter(p=>p.email===u.email).map(p=>`<div class="comment"><b>${p.title}</b><br><small>${p.category}</small></div>`).join('')||'No posts created';
